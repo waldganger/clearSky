@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css"
+    <title>Météo app</title>
+</head>
+<body>
+    <div class="location">
+        <h1 class="location-timezone">Activez la géolocalisation !</h1>
+        <canvas class="icon" width="256" height="256"></canvas>
+    </div>
+
+    <div class="temperature">
+        <div class="degree-section">
+            <h2 class="temperature-degree">-</h2>
+            <span>°</span>
+        </div>
+
+        <div class="pluie-section">
+            <span>Précipitations dans l'heure : </span>
+            <h2 class="pluie-mm">-</h2>
+            <span>mm</span>
+        </div>
+
+        <div class="vent-section">
+            <span>Vent moyen : </span>
+            <h2 class="vent-moyen">-</h2>
+            <span>km/h</span>
+            <span>Rafales : </span>
+            <h2 class="vent-rafales">-</h2>
+            <span>km/h</span>
+        </div>
+
+        <div class="pression-section">
+            <span>Pression atm : </span>
+            <h2 class="pression-hp">-</h2>
+            <span>hp</span>
+        </div>
+        
+        <div class="sky-description">Il fait frisquet.</div>
+    </div>
+    
+    <script src="node_modules/skycons/skycons.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

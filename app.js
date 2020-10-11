@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
                 const heure = provideDate();
                 const temperatureCelsius = Math.floor(data[heure].temperature["2m"] - 273.15);
                 const nebulositePCent = data[heure].nebulosite.totale;
-                const pluieMm = Math.floor(data[heure].pluie / 3);
+                const pluieMm = data[heure].pluie;
                 const risqueNeige = data[heure].risque_neige;
                 const ventMoyenKmH = Math.floor(data[heure].vent_moyen["10m"]);
                 const ventRafalesKmH = Math.floor(data[heure].vent_rafales["10m"]);
@@ -100,11 +100,11 @@ window.addEventListener('load', () => {
             return "WIND"
         } else if ((heure >= 6 && heure <= 20) && (nuages > 20 && nuages > 60)) {
             return "PARTLY_CLOUDY_DAY";
-        } else if ((heure < 6 && heure > 20) && (nuages > 20 && nuages > 60)) {
+        } else if ((heure < 6 || heure > 20) && (nuages > 20 && nuages > 60)) {
             return "PARTLY_CLOUDY_NIGHT";
         } else if ((heure >= 6 && heure <= 20) && (nuages <= 20)) {
             return "CLEAR_DAY";
-        } else if ((heure < 6 && heure > 20) && (nuages <= 20)) {
+        } else if ((heure < 6 || heure > 20) && (nuages <= 20)) {
             return "CLEAR_NIGHT";
         }
     }

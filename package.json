@@ -4,8 +4,7 @@
   "description": "Appli météo",
   "main": "app.js",
   "dependencies": {
-    "cors-anywhere": "^0.4.3",
-    "skycons": "^1.0.0"
+    "cors-anywhere": "^0.4.3"
   },
   "devDependencies": {},
   "scripts": {
